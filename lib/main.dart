@@ -28,7 +28,7 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   static const _initialCameraPosition = CameraPosition(
-    target: LatLng(24.8607, 67.0011),
+    target: LatLng(24.8607, 67.0011),       // Karachi Latitude and Longitude.
     zoom: 11.5,
   );
 
@@ -45,8 +45,8 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return Scaffold( extendBodyBehindAppBar: true,
+      appBar: AppBar( backgroundColor: Colors.transparent, elevation: 0.0,
         centerTitle: false,
         title: const Text('Google Maps'),
         actions: [
@@ -89,6 +89,9 @@ class _MapScreenState extends State<MapScreen> {
       body: Stack(
         alignment: Alignment.center,
         children: [
+
+
+
           GoogleMap(
             myLocationButtonEnabled: false,
             zoomControlsEnabled: false,
@@ -139,11 +142,67 @@ class _MapScreenState extends State<MapScreen> {
                 ),
               ),
             ),
+
+          Positioned( top: 80,
+            child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // SizedBox( width: 50.0,),
+                Container(
+                  height: 50, width: 280,
+                  // margin: EdgeInsets.symmetric(horizontal: 20.0),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Icon(Icons.pin_drop, color: Colors.red,),
+                      Text("Karachi, Pakistan"),
+                      Icon(Icons.arrow_drop_down)
+                    ],
+                  ),
+                ),
+                SizedBox( width: 20.0,),
+
+                Container( height: 50, width: 50,
+                  decoration: BoxDecoration(
+                      // color: Colors.white,
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: ElevatedButton(
+                      style : ElevatedButton.styleFrom(
+                        primary: Colors.white,
+
+                      ),
+                      onPressed: (){},
+                      child: Icon(Icons.menu, color: Colors.black,)),
+                ),
+                // SizedBox( width: 50.0,),
+
+              ],
+            ),
+          ),
+
+          Positioned( top:575, left: 25,
+            child: Container( height: 60, width: 280,
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(40)
+              ),
+              child:
+              Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.compass_calibration_outlined, color: Colors.white,),
+                  Icon(Icons.search, color: Colors.white,),
+                  Icon(Icons.email, color: Colors.white,),
+                ],
+              ),),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).primaryColor,
-        foregroundColor: Colors.black,
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
         onPressed: () => _googleMapController.animateCamera(
           _info != null
               ? CameraUpdate.newLatLngBounds(_info.bounds, 100.0)
