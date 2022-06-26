@@ -21,7 +21,7 @@ class DirectionsRepository {
       queryParameters: {
         'origin': '${origin.latitude},${origin.longitude}',
         'destination': '${destination.latitude},${destination.longitude}',
-        'key': "AIzaSyDzx4jTRddAlfy7ivJayvd_lL862v4QW1o",
+        'key': "Your Api Key",    // Enter your api key here, visit: https://console.cloud.google.com/  (ShahabDG1)
       },
     );
 
