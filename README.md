@@ -14,7 +14,7 @@ Google Map and Flutter Project (Flutter 2.0.6)
 <!-- COMING SOON :screwdriver: :placard:	  -->
 
 
- <img align="left" src="https://user-images.githubusercontent.com/104030327/184551236-66cb29ab-8b06-4b10-99c3-38e0fe01ccb3.png" />
+ <img  src="https://user-images.githubusercontent.com/104030327/184551236-66cb29ab-8b06-4b10-99c3-38e0fe01ccb3.png" /> <br/>
 
 
 <!-- ## Result Screen -->
