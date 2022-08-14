@@ -5,6 +5,7 @@ Google Map and Flutter Project (Flutter 2.0.6)
 ## Features
 
 - Google Map Integration
+- Google Map API
 - User initital Location (Green Pin)
 - User Final Location (Blue Pin)
 - 2 Screens
