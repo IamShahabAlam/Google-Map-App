@@ -20,8 +20,6 @@ Google Map and Flutter Project (Flutter 2.0.6)
 
 <!-- ## Result Screen -->
 
-
-
 ## Credits
 
  ### [Shahab Alam](#) <br/><br/>
